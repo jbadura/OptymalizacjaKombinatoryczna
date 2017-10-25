@@ -44,9 +44,9 @@ def read_instance(file_in):
             Q = int(line_tab[0])
         elif len(line_tab) == 7:
             d = Depo(line_tab)
-            depos[d.id] == d
+            depos[d.id] = d
     f.close()
-    return d, M, Q
+    return depos, M, Q
 
 
 file_in = sys.argv[1]
