@@ -41,7 +41,7 @@ def read_instance(file_in):
         line_tab = line.split(" ")
         if len(line_tab) == 2:
             M = int(line_tab[0])
-            Q = int(line_tab[0])
+            Q = int(line_tab[1])
         elif len(line_tab) == 7:
             d = Depo(line_tab)
             depos[d.id] = d
@@ -57,6 +57,7 @@ depos, M, Q = read_instance(file_in)
 user = open(user_out)
 first = True
 res = 0.0
+depos[0].done = True
 for line in user:
     line_tab = line.strip().split(" ")
     if len(line_tab) == 0 or (len(line_tab) == 1 and line_tab[0] == ""):
