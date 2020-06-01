@@ -4,6 +4,7 @@ import re
 import sys, traceback
 from math import sqrt
 
+# komentarz
 
 class Depo:
     def __init__(self, line_tab):
